@@ -93,9 +93,10 @@ print(word_iteration * 7)
 # Word Search:
 # Check if the word "moonlight" appears in the quote: "With freedom, books, flowers, and the moon, who could not be happy? - Oscar Wilde"
 
+wordcheck = 'moonlight'
 quote = "With freedom, books, flowers, and the moon, who could not be happy? - Oscar Wilde"
-word_check = quote.find('moonlight')
-print(word_check) #there is no moonlight breh (returns -1)
+appears = wordcheck in quote
+print(appears) #there is no moonlight breh (returns -1)
 
 
 # Length and Count:
