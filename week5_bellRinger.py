@@ -63,14 +63,23 @@ motto = ["Make", "haste", "slowly."] #a
 join_string = ' '.join(motto)
 print(join_string)
 
+#B
+split_motto = join_string.split('a')
+print(split_motto)
+
 # Replacing Words:
 # Modify the sentence: "Life is what happens when you are busy making other plans."
 # a. Replace "busy" with "distracted".
 # b. Replace "plans" with "mistakes".
 
 sentence = "Life is what happens when you are busy making other plans."
-word1 = sentence.find('busy')
-word2 = sentence.find('plans')
+word1 = sentence.replace('busy', 'distracted')
+sentence = word1
+word2 = sentence.replace('plans', 'mistakes')
+sentence = word2
+print(sentence)
+
+#Mr. Evins way
 
 
 
