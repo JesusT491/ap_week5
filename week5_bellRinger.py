@@ -5,15 +5,33 @@
 # b. Retrieve the second to last character.
 # c. Find the first occurrence of the letter 'c'.
 
+magic = 'abracadabra'
+print(magic[4]) #a also the first letter in the string is 0
+print(magic[9]) #b
+print(magic.find('c')) #c
+
 # Advanced Slicing:
 # Given the string alphabet = 'abcdefghijklmnopqrstuvwxyz',
 # a. Extract the letters 'hij'.
 # b. Extract every second letter starting from 'a' to 'm'.
 # c. Reverse the entire string using slicing.
 
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+print(alphabet.find('hij')) #method 1
+hij_index = alphabet.index('hij') #directly looks for the index in a string
+print(hij_index)
+print(alphabet[0:13:2]) #every second letter
+print(alphabet[::-1]) #reverse
+
 # Problem Set 2: Extracting Information
 # From Descriptions:
 # Extract the name of the famous personality from the quote "Ask not what your country can do for you — ask what you can do for your country. - John F. Kennedy"
+
+quote = "Ask not what your country can do for you — ask what you can do for your country. - John F. Kennedy"
+print(quote.split()[-1])
+
+name = quote.find('John F. Kennedy')
+print(name)
 
 # Manipulating Words:
 # Given the string info = "Python is fun. Fun is good. Good is subjective.",
@@ -21,27 +39,69 @@
 # b. Extract every third word.
 # c. Reverse the positions of the words, but keep the characters in each word in the same order.
 
+info = "Python is fun. Fun is good. Good is subjective."
+print(info.split()[-1]) #a
+print(info.split()[::3]) #b
+#c
+reverse_word_positions = info.split()[::-1]
+reverse_word_positions = ''.join(reverse_word_positions)
+print(reverse_word_positions)
+
 # Problem Set 3: String Methods
 # Upper & Lower:
 # Convert the following text to lowercase: "MAY THE FORCE BE WITH YOU."
+
+text = "MAY THE FORCE BE WITH YOU."
+print(text.lower())
 
 # String Joining and Splitting:
 # Given the list motto = ["Make", "haste", "slowly."],
 # a. Convert the list into a single string.
 # b. Now, split the string at every occurrence of the letter 'a'.
 
+motto = ["Make", "haste", "slowly."] #a
+join_string = ' '.join(motto)
+print(join_string)
+
 # Replacing Words:
 # Modify the sentence: "Life is what happens when you are busy making other plans."
 # a. Replace "busy" with "distracted".
 # b. Replace "plans" with "mistakes".
 
+sentence = "Life is what happens when you are busy making other plans."
+word1 = sentence.find('busy')
+word2 = sentence.find('plans')
+
+
+
 # Problem Set 4: String Properties and Advanced Operations
 # Repetition:
 # Concatenate the word "Iteration" 7 times.
 
+word_iteration = 'Iteration '
+print(word_iteration * 7)
+
 # Word Search:
 # Check if the word "moonlight" appears in the quote: "With freedom, books, flowers, and the moon, who could not be happy? - Oscar Wilde"
+
+quote = "With freedom, books, flowers, and the moon, who could not be happy? - Oscar Wilde"
+word_check = quote.find('moonlight')
+print(word_check) #there is no moonlight breh
+
 
 # Length and Count:
 # a. Calculate the number of characters (including spaces and punctuation) in the word/phrase: "Supercalifragilisticexpialidocious".
 # b. Count the number of times the letter 'i' appears in the same word/phrase.
+
+text2 = "Supercalifragilisticexpialidocious"
+print(len(text2)) #a
+
+index = text2.index('i') #b
+print(index)
+
+
+
+
+
+#.find looks for a phrase without an error
+#.index looks for a phrase and expects it to be there
