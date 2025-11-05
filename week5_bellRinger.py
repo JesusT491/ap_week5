@@ -95,7 +95,7 @@ print(word_iteration * 7)
 
 quote = "With freedom, books, flowers, and the moon, who could not be happy? - Oscar Wilde"
 word_check = quote.find('moonlight')
-print(word_check) #there is no moonlight breh
+print(word_check) #there is no moonlight breh (returns -1)
 
 
 # Length and Count:
@@ -105,12 +105,12 @@ print(word_check) #there is no moonlight breh
 text2 = "Supercalifragilisticexpialidocious"
 print(len(text2)) #a
 
-index = text2.index('i') #b
-print(index)
+#b
+print(text2.count('i'))
 
 
 
 
 
 #.find looks for a phrase without an error
-#.index looks for a phrase and expects it to be there
+#.index looks for a phrase and expects it to be there (ALSO ONLY RETURNS A NUMBER)
